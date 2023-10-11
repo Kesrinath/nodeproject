@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Player Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(123, 167, 199, 0.619);
+        }
+
+        .player-details {
+            text-align: center;
+            margin: 50px;
+            text-transform: capitalize;
+            font-size: 2rem;
+        }
+
+        .player-details img {
+            max-width: 40rem;
+            max-height: 30rem;
+            border-radius: 10px;
+            margin: 2rem;
+        }
+
+        .next-button {
+            display: block;
+            height: 2rem;
+            width: 17rem;
+            padding: 0.5rem;
+            background-color: mediumorchid;
+            text-align: center;
+
+            margin-left: 45rem;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            border-radius: 1rem;
+        }
+
+        .next-button:hover {
+            background-color: mediumseagreen;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="player-details">
+        <h1>
+            <%= player.name %>
+        </h1>
+        <p>Age: <%= player.age %>
+        </p>
+        <img src="<%= player.imageUrl %>" alt="Player Image">
+    </div>
+    <a href="/next?playerId=<%= player._id %>" class="next-button">Next Player</a>
+
+
+</html>

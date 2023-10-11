@@ -1,11 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const ejs = require("ejs"); // Add this line
+const ejs = require("ejs"); 
 
-app.set("view engine", "ejs"); // Add this line
-
-// ...rest of your code...
+app.set("view engine", "ejs");
 
 // Connect to MongoDB Atlas
 mongoose.connect(
